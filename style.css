@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body{
+    background-color: #f4f9ff;
+    font-size: 0.875rem;
+}
+
+header img{
+    width: 140px;
+}
+
+header{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header-area{
+    padding-top: 48px;
+}
+
+.main-wrapper{
+    text-align: center;
+}
+
+.mainvisual{
+    padding-top: 10px;
+}
+
+.index-area{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 18px 0;
+}
+
+.index-wrapper{
+    max-width: 1000px;
+    background-color: #fff;
+    margin: 70px auto;
+}
+
+.index-list li{
+    margin-bottom: 20px;
+}
+
+.section-title{
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.index-area ol{
+    margin: 0;
+    padding-left: 0;
+}
+
+.index-area li {
+  list-style-position: inside;  /* 数字を内側にして左端に寄せる */
+}
