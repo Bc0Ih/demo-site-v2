@@ -79,10 +79,15 @@ header {
 }
 
 /*.content dt{
-    width: 25%;
 }
-
-.content dd{
+*/
+/* .content dd{ 
     width: 75%;
 }
-    */
+*/
+
+.title{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+}
