@@ -87,7 +87,32 @@ header {
 */
 
 .title{
-  display: inline-block;
   font-weight: bold;
   font-size: 20px;
+  margin-top: 0;
+}
+
+dl {
+  border-top: 2px solid #dedede;
+  border-bottom: 2px solid #dedede;
+}
+
+.link {
+  color: #333;
+}
+
+.link:hover{
+  opacity: 0.8;
+}
+
+.detail-wrapper{
+  margin-bottom: 100px;
+}
+
+footer{
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.625rem;
+  padding: 15px 0;
+
 }
