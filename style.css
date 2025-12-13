@@ -78,13 +78,16 @@ header {
   margin-bottom: 25px;
 }
 
-/*.content dt{
+.content dt{
+  width: 70px;
+  
 }
-*/
-/* .content dd{ 
-    width: 75%;
+
+ .content dd{ 
+    width: calc(100% - 70px);
+    margin: 0;
 }
-*/
+
 
 .title{
   font-weight: bold;
@@ -115,4 +118,41 @@ footer{
   font-size: 0.625rem;
   padding: 15px 0;
 
+}
+
+@media (max-width: 600px) {
+  /* 全体の余白をスマホ用に */
+  header,
+  .index-area,
+  .detail-area,
+  footer {
+    padding: 0 16px;
+  }
+
+  /* DETAIL：横並び → 縦並び */
+  .content {
+    flex-direction: column;
+  }
+
+  /* 画像：横幅いっぱい、余白調整 */
+  .detail-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+  /* dl：幅調整（今の70pxはPC向けなのでスマホでは少し広げると読みやすい） */
+  .content dt {
+    width: 80px;
+  }
+  .content dd {
+    width: calc(100% - 80px);
+    margin: 0;
+  }
+
+  /* メインビジュアルがはみ出すなら保険 */
+  .mainvisual {
+    width: 100%;
+    height: auto;
+  }
 }
