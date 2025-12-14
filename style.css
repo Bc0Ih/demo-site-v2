@@ -121,12 +121,18 @@ footer{
 }
 
 @media (max-width: 600px) {
+
   /* 全体の余白をスマホ用に */
-  header,
   .index-area,
   .detail-area,
-  footer {
-    padding: 0 16px;
+  footer
+  
+  {
+    padding: 0 40px;
+  }
+
+  .index-wrapper{
+    margin: 0;
   }
 
   /* DETAIL：横並び → 縦並び */
@@ -156,3 +162,5 @@ footer{
     height: auto;
   }
 }
+
+/* 明日はレスポンシブで余白を作るところから */
