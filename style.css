@@ -52,10 +52,6 @@ header {
   padding-left: 0;
 }
 
-.index-area li {
-  list-style-position: inside; /* 数字を内側にして左端に寄せる */
-}
-
 .detail-image {
   width: 270px;
   margin-right: 60px;
@@ -123,7 +119,27 @@ footer{
 @media (max-width: 600px) {
 
   /* 全体の余白をスマホ用に */
-  .index-area,
+
+  body{
+    margin: 0;
+  }
+
+  main{
+    padding: 0;
+  }
+
+  .header-area{
+    padding-top: 30px;
+  }
+
+  .header-logo{
+    padding-left: 15px;
+  }
+
+  .main-wrapper{
+    padding: 0 16px;
+  }
+
   .detail-area,
   footer
   
@@ -131,8 +147,9 @@ footer{
     padding: 0 40px;
   }
 
-  .index-wrapper{
-    margin: 0;
+  .section-title{
+    margin-top: 20px;
+    display: inline-block;
   }
 
   /* DETAIL：横並び → 縦並び */
@@ -149,10 +166,10 @@ footer{
 
   /* dl：幅調整（今の70pxはPC向けなのでスマホでは少し広げると読みやすい） */
   .content dt {
-    width: 80px;
+    width: 65px;
   }
   .content dd {
-    width: calc(100% - 80px);
+    width: calc(100% - 65px);
     margin: 0;
   }
 
@@ -161,6 +178,47 @@ footer{
     width: 100%;
     height: auto;
   }
+
+  .title{
+    font-size: 1.125rem;
+  }
+
+  dd{
+    font-size: 13px;
+  }
+
+  .text2{
+    font-size: 13px;
+  }
+
+  .index-area{
+    padding: 20px 40px;
+  }
+
+  .index-list {
+  list-style: none;   /* 標準の番号を消す */
+  padding-left: 0;
+  margin: 0;
+}
+
+.index-list li {
+  display: grid;
+  grid-template-columns: 1em 1fr; /* 左:番号 / 右:本文 */
+  column-gap: 0.6em;
+  margin-bottom: 20px;
+}
+
+.index-list li::before {
+  counter-increment: index;
+  content: counter(index) ".";
+  text-align: right;
+}
+.index-list {
+  counter-reset: index;
+}
+
+
 }
 
 /* 明日はレスポンシブで余白を作るところから */
+/* INDEX上の余白20px 0;で作ればおk */
